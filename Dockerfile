@@ -10,10 +10,10 @@ RUN mv Atmel.ATtiny_DFP.1.4.310.atpack Atmel.ATtiny_DFP.1.4.310.zip
 RUN mv Atmel.ATmega_DFP.1.4.351.atpack Atmel.ATmega_DFP.1.4.351.zip
 RUN mv Atmel.SAMD21_DFP.1.3.395.atpack Atmel.SAMD21_DFP.1.3.395.zip
 RUN mv Atmel.SAML21_DFP.1.2.125.atpack Atmel.SAML21_DFP.1.2.125.zip
-RUN unzip Atmel.ATtiny_DFP.1.4.310.zip
-RUN unzip Atmel.ATmega_DFP.1.4.351.zip
-RUN unzip Atmel.SAMD21_DFP.1.3.395.zip
-RUN unzip Atmel.SAML21_DFP.1.2.125.zip
+RUN unzip -d attiny Atmel.ATtiny_DFP.1.4.310.zip
+RUN unzip -d atmega Atmel.ATmega_DFP.1.4.351.zip
+RUN unzip -d samd21 Atmel.SAMD21_DFP.1.3.395.zip
+RUN unzip -d saml21 Atmel.SAML21_DFP.1.2.125.zip
 RUN rm Atmel.ATtiny_DFP.1.4.310.zip
 RUN rm Atmel.ATmega_DFP.1.4.351.zip
 RUN rm Atmel.SAMD21_DFP.1.3.395.zip
