@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y ninja-build gcc-arm-none-eabi gcc-avr b
 WORKDIR /opt
 RUN mkdir packs
 WORKDIR /opt/packs
+WORKDIR /opt/packs
 RUN wget -q http://packs.download.atmel.com/Atmel.ATtiny_DFP.1.4.310.atpack http://packs.download.atmel.com/Atmel.SAML21_DFP.1.2.125.atpack http://packs.download.atmel.com/Atmel.ATmega_DFP.1.4.351.atpack http://packs.download.atmel.com/Atmel.SAMD21_DFP.1.3.395.atpack http://packs.download.atmel.com/ARM.CMSIS.5.4.0.atpack
 RUN mv Atmel.ATtiny_DFP.1.4.310.atpack Atmel.ATtiny_DFP.1.4.310.zip
 RUN mv Atmel.ATmega_DFP.1.4.351.atpack Atmel.ATmega_DFP.1.4.351.zip
