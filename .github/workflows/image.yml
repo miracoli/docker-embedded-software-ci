@@ -6,7 +6,8 @@ on:
 
 jobs:
   build:
-    runs-on: debian-latest
+    runs-on: self-hosted
+    
     steps:
       - name: checkout code
         uses: actions/checkout@v2
