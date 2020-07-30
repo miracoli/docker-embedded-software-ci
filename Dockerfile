@@ -1,10 +1,12 @@
 FROM debian:buster-slim
 ENV VERSION v1.0
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install -y ninja-build gcc-arm-none-eabi gcc-avr binutils-avr avr-libc wget git unzip cmake autoconf gcovr lcov libgtest-dev libboost1.67-all-dev doxygen-latex python-pygments cppcheck g++ gcc graphviz g++-multilib gcc-multilib valgrind strace && rm -rf /var/lib/apt/lists/* 
+
+RUN apt-get update && apt-get install -y ninja-build gcc-arm-none-eabi gcc-avr binutils-avr avr-libc wget git unzip cmake autoconf gcovr lcov libgtest-dev libboost1.67-all-dev python-pygments cppcheck g++ gcc doxygen-latex graphviz valgrind strace && rm -rf /var/lib/apt/lists/* 
 
 WORKDIR /opt
 RUN mkdir packs
+WORKDIR /opt/packs
 WORKDIR /opt/packs
 RUN wget -q http://packs.download.atmel.com/Atmel.ATtiny_DFP.1.4.310.atpack http://packs.download.atmel.com/Atmel.SAML21_DFP.1.2.125.atpack http://packs.download.atmel.com/Atmel.ATmega_DFP.1.4.351.atpack http://packs.download.atmel.com/Atmel.SAMD21_DFP.1.3.395.atpack http://packs.download.atmel.com/ARM.CMSIS.5.4.0.atpack
 RUN mv Atmel.ATtiny_DFP.1.4.310.atpack Atmel.ATtiny_DFP.1.4.310.zip
